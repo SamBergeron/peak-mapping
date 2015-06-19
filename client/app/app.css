@@ -1,0 +1,36 @@
+.map-canvas { height: 400px; }
+
+.angular-google-map-container { height: 400px; }
+
+.drop-box {
+    background: #F8F8F8;
+    border: 5px dashed #DDD;
+    width: 200px;
+    height: 65px;
+    text-align: center;
+    padding-top: 25px;
+    margin: 10px;
+}
+
+.map-img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery img {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  overflow: auto;
+}
+
+.gallery img.main {
+  max-width: 400px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  overflow: auto;
+}

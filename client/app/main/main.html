@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-sm-9">
+    <ui-gmap-google-map center="map.center" zoom="map.zoom "events="map.events"
+      options="map.options" refresh="true" events="map.events" control="map.control">
+      <ui-gmap-markers models="markers" coords="'self'" icon="'icon'" idKey="'_id'">
+        <ui-gmap-windows show="show">
+            <div ng-non-bindable>
+              <!-- Careful here using a angular tag in ng-non-bindable, might get weird link errors -->
+              <h6>
+                <i class="fa fa-picture-o"/>&nbsp;
+                <a href="/gallery/{{_id}}">{{title}}</a>
+              </h6>
+            </div>
+        </ui-gmap-windows>
+      </ui-gmap-markers>
+    </ui-gmap-google-map>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="container-fluid">
+
+      <ul>
+        <h4 title="Click to center on map, Double-Click to go straight to gallery">
+          Navigation <i class="fa fa-info-circle"/>
+        </h4>
+      </ul>
+      <ul ng-repeat="z in zones">
+        <b><u>{{z}}</u></b>
+        <li class="list-unstyled" ng-repeat="marker in markers | filter: zone=z ">
+          <i class="fa fa-tree"></i>
+          <a ng-click="centerOnMarker(marker)" ng-dblclick="goToGallery(marker._id)">{{marker.title}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

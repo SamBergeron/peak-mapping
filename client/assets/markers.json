@@ -1,0 +1,102 @@
+[{
+    "id": "0",
+    "animation": "google.maps.Animation.DROP",
+    "latitude": "50.963426",
+    "longitude": "-118.089938",
+    "title" : "Mount Mackenzie",
+    "zone": "Revelstoke",
+    "imgUrl": "/images/test1.jpg",
+    "gallery": "mount_mackenzie"
+  },
+  {
+    "id": "1",
+    "animation": "google.maps.Animation.DROP",
+    "latitude": "50.932107",
+    "longitude":  "-118.287929",
+    "title" : "Mount MacPherson",
+    "zone": "Revelstoke",
+    "imgUrl": "/images/test2.jpg",
+    "gallery": "mount_macpherson"
+  },
+  {
+    "id": "3",
+    "animation": "google.maps.Animation.DROP",
+    "latitude": "50.954528",
+    "longitude": "-118.070146",
+    "zone": "Revelstoke",
+    "title" : "Montana Peak",
+    "gallery": "montana_peak"
+  },
+  {
+    "id": "4",
+    "animation": "google.maps.Animation.DROP",
+    "latitude": "50.947210",
+    "longitude": "-118.070838",
+    "zone": "Revelstoke",
+    "title" : "Kokanee Peak",
+    "gallery": "kokanee_peak"
+  },
+  {
+    "id": "5",
+    "animation": "google.maps.Animation.DROP",
+    "latitude": "51.284364",
+    "longitude": "-117.559961",
+    "zone": "Roger's Pass",
+    "title" : "Cheops Mountain STS Couloir",
+    "gallery": "cheops_sts_couloir"
+  },
+  {
+    "id": "6",
+    "animation": "google.maps.Animation.DROP",
+    "latitude": "51.311348",
+    "longitude": "-117.577142",
+    "zone": "Roger's Pass",
+    "title" : "Ursus Minor Mountain",
+    "gallery": "ursus_minor"
+  },
+  {
+    "id": "7",
+    "animation": "google.maps.Animation.DROP",
+    "latitude": "51.302349",
+    "longitude": "-117.585946",
+    "zone": "Roger's Pass",
+    "title" : "Video Peak",
+    "gallery": "video_peak"
+  },
+  {
+    "id": "8",
+    "animation": "google.maps.Animation.DROP",
+    "latitude": "51.296874",
+    "longitude": "-117.591284",
+    "zone": "Roger's Pass",
+    "title" : "Balu Peak (8812)",
+    "gallery": "balu_peak"
+  },
+  {
+    "id": "9",
+    "animation": "google.maps.Animation.DROP",
+    "latitude": "51.399418",
+    "longitude": "-116.22351",
+    "zone": "Banff National Park",
+    "title" : "Fairview Mountain",
+    "gallery": "fairview_mountain"
+  },
+  {
+    "id": "10",
+    "animation": "google.maps.Animation.DROP",
+    "latitude": "43.719915",
+    "longitude": "-110.799791",
+    "zone": "Teton National Park",
+    "title" : "Nez Perce West Hourglass",
+    "gallery": "west_hourglass"
+  },
+  {
+    "id": "11",
+    "animation": "google.maps.Animation.DROP",
+    "latitude": "43.729266",
+    "longitude": "-110.809493",
+    "zone": "Teton National Park",
+    "title" : "Middle Teton East Face",
+    "gallery": "middle_teton"
+  }
+]
