@@ -374,13 +374,13 @@ module.exports = function (grunt) {
           ]
         }, {
           expand: true,
-          cwd: '<%= yeoman.app %>/bower_components/bootstrap/fonts',
-          dest: '<%= yeoman.dist %>/fonts',
+          cwd: '<%= yeoman.client %>/bower_components/bootstrap/fonts',
+          dest: '<%= yeoman.dist %>/public/fonts',
           src: '*.*'
         }, {
           expand: true,
-          cwd: '<%= yeoman.app %>/bower_components/font-awesome/fonts',
-          dest: '<%= yeoman.dist %>/fonts',
+          cwd: '<%= yeoman.client %>/bower_components/font-awesome/fonts',
+          dest: '<%= yeoman.dist %>/public/fonts',
           src: '*.*'
         }]
       },

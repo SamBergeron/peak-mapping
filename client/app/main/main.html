@@ -7,7 +7,7 @@
             <div ng-non-bindable>
               <!-- Careful here using a angular tag in ng-non-bindable, might get weird link errors -->
               <h6>
-                <i class="fa fa-picture-o"/>&nbsp;
+                <span class="fa fa-picture-o">&nbsp;</span>
                 <a href="/gallery/{{_id}}">{{title}}</a>
               </h6>
             </div>
@@ -21,13 +21,13 @@
 
       <ul>
         <h4 title="Click to center on map, Double-Click to go straight to gallery">
-          Navigation <i class="fa fa-info-circle"/>
+          Navigation <i class="fa fa-info-circle"></i>
         </h4>
       </ul>
       <ul ng-repeat="z in zones">
         <b><u>{{z}}</u></b>
         <li class="list-unstyled" ng-repeat="marker in markers | filter: zone=z ">
-          <i class="fa fa-tree"></i>
+          <span class="fa fa-tree"></span>
           <a ng-click="centerOnMarker(marker)" ng-dblclick="goToGallery(marker._id)">{{marker.title}}</a>
         </li>
       </ul>

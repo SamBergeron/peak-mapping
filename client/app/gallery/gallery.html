@@ -8,10 +8,10 @@
           </div>
           <div class="row">
             <h3 class="text-left">
-              <span ng-click="showPrev()" tooltip="Previous"><i class="fa fa-hand-o-left"/></span>
-              <span ng-click="startSlide()" tooltip="Start slide"><i class="fa fa-play"/></span>
-              <span ng-click="stopSlide()" tooltip="Stop slide"><i class="fa fa-pause"/></span>
-              <span ng-click="showNext()" tooltip="Next"><i class="fa fa-hand-o-right"/></span>
+              <i ng-click="showPrev()" tooltip="Previous"><span class="fa fa-hand-o-left"></i></span>
+              <i ng-click="startSlide()" tooltip="Start slide"><span class="fa fa-play"></i></span>
+              <i ng-click="stopSlide()" tooltip="Stop slide"><span class="fa fa-pause"></i></span>
+              <i ng-click="showNext()" tooltip="Next"><span class="fa fa-hand-o-right"></i></span>
 
               <a class="pull-right" href="/">Back to the map</a>
             </h3>
@@ -24,7 +24,7 @@
 
       <div ng-show="!photos.length">
         <h2 class="text-center">
-          <i class="fa fa-frown-o"/>&nbsp;Looks like there's no gallery for {{galleryId}}, time to plan a trip!
+          <i class="fa fa-frown-o"></i>&nbsp;Looks like there's no gallery for {{galleryId}}, time to plan a trip!
         </h2>
         <h3 class="text-center">(Choose one from the map)</h3>
       </div>
