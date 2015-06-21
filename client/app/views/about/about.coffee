@@ -3,5 +3,5 @@
 angular.module 'peakMapApp'
 .config ($routeProvider) ->
   $routeProvider.when '/about',
-    templateUrl: 'app/about/about.html'
+    templateUrl: 'app/views/about/about.html'
     controller: 'AboutCtrl'

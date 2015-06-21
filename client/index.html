@@ -20,11 +20,11 @@
     <!-- build:css({.tmp,client}) app/app.css -->
     <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
-      <link rel="stylesheet" href="app/about/about.css">
       <link rel="stylesheet" href="app/agency.css">
       <link rel="stylesheet" href="app/app.css">
-      <link rel="stylesheet" href="app/gallery/gallery.css">
-      <link rel="stylesheet" href="app/main/main.css">
+      <link rel="stylesheet" href="app/views/about/about.css">
+      <link rel="stylesheet" href="app/views/gallery/gallery.css">
+      <link rel="stylesheet" href="app/views/main/main.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
@@ -111,9 +111,11 @@
         <!-- build:js({.tmp,client}) app/app.js -->
         <script src="app/app.js"></script>
           <!-- injector:js -->
-          <script src="app/about/about.js"></script>
-          <script src="app/gallery/gallery.js"></script>
-          <script src="app/main/main.js"></script>
+          <script src="app/directives/fadeIn/fadeIn.js"></script>
+          <script src="app/services/preloader/preloader.js"></script>
+          <script src="app/views/about/about.js"></script>
+          <script src="app/views/gallery/gallery.js"></script>
+          <script src="app/views/main/main.js"></script>
           <script src="components/modal/modal.js"></script>
           <script src="components/navbar/navbar.js"></script>
           <!-- endinjector -->

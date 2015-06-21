@@ -4,5 +4,5 @@ angular.module 'peakMapApp'
 .config ($routeProvider) ->
   $routeProvider
   .when '/gallery/:galleryId',
-    templateUrl: 'app/gallery/gallery.html'
+    templateUrl: 'app/views/gallery/gallery.html'
     controller: 'GalleryCtrl'

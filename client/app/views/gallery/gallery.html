@@ -17,7 +17,7 @@
             </h3>
           </div>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-8" ng-show="galleryLoaded">
           <img ng-repeat="photo in photos" ng-src="{{photo.url}}" ng-click="showSelect($index)"/>
         </div>
       </div>

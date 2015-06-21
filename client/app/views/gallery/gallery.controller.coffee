@@ -1,19 +1,28 @@
 'use strict'
 
 angular.module 'peakMapApp'
-.controller 'GalleryCtrl', ($scope, $log, $interval, $routeParams, $http) ->
+.controller 'GalleryCtrl', ($scope, $log, $interval, $routeParams, $http, preloader) ->
 
   $scope.galleryId = $routeParams.galleryId
   $scope.photos = []
+  $scope.photoUrls = []
+  $scope.galleryLoaded = false
 
-  # Call GET on pictures Table
-  $http.get('/api/pictures/peakRef/' + $scope.galleryId).success (res) ->
+  $http # Call GET on pictures Table
+  .get('/api/pictures/peakRef/' + $scope.galleryId).success (res) ->
+    $scope.loadCount = 0
     for picture in res
       $scope.photos.push(picture)
-    #$log.log 'Here are the markers: ' + $scope.markers
+      $scope.photoUrls.push(picture.url)
+
+    preloader.preloadArray($scope.photoUrls).then () ->
+      console.log('Images have been loaded')
+      $scope.galleryLoaded = true
+
   .error (res) ->
     $log.log 'Loading pictures has failed ' + res
 
+  # Gallery control functions -----------------------------------
   $scope._index = 0;
   $scope.isImageActive = (index) ->
     return index == $scope._index
