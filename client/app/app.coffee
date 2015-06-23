@@ -5,6 +5,7 @@ angular.module 'peakMapApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
+  'ngAnimate',
   'ui.bootstrap',
   'uiGmapgoogle-maps'
 ]
@@ -14,7 +15,7 @@ angular.module 'peakMapApp', [
     redirectTo: '/'
 
   $locationProvider.html5Mode true
-  
+
 .config (uiGmapGoogleMapApiProvider) ->
   uiGmapGoogleMapApiProvider
     .configure

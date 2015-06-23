@@ -31,6 +31,10 @@ angular.module 'peakMapApp'
       $scope.galleryLoaded = true
     )
 
+  $scope.$watch('galleryLoaded', () ->
+    $log.debug('galleryLoaded value: ' + $scope.galleryLoaded)
+    )
+
   # Gallery control functions -----------------------------------
   $scope._index = 0;
   $scope.isImageActive = (index) ->
