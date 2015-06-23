@@ -3,7 +3,7 @@
       <div class="gallery" ng-show="resSize != 0">
         <div class="col-sm-4">
           <div class="row text-center">
-            <img ng-repeat="photo in photos" class="main animate-show" ng-show="isImageActive($index)" ng-src="{{photo.url}}"
+            <img ng-repeat="photo in photos" class="main" ng-show="isImageActive($index)" ng-src="{{photo.url}}"
                   ng-click="stopSlide()"/>
           </div>
           <div class="row">
