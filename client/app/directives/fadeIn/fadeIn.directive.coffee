@@ -1,8 +1,13 @@
 'use strict'
 
 angular.module 'peakMapApp'
-.directive 'fadeIn', ->
-  template: '<div></div>'
-  restrict: 'EA'
+.directive 'fadeIn', ($log) ->
+  console.log('Inside the fade directive')
+  restrict: 'A'
   link: (scope, element, attrs) ->
-    element.text 'this is the fadeIn directive'
+    if(!attrs.fadeIn)
+      $log.log('wtf')
+      element.hide()
+    else
+      $log.log('Fading in')
+      element.fadeIn()

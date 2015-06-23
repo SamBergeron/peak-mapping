@@ -8,17 +8,19 @@
           </div>
           <div class="row">
             <h3 class="text-left">
-              <i ng-click="showPrev()" tooltip="Previous"><span class="fa fa-hand-o-left"></i></span>
-              <i ng-click="startSlide()" tooltip="Start slide"><span class="fa fa-play"></i></span>
-              <i ng-click="stopSlide()" tooltip="Stop slide"><span class="fa fa-pause"></i></span>
-              <i ng-click="showNext()" tooltip="Next"><span class="fa fa-hand-o-right"></i></span>
-
+              <i ng-click="showPrev()" class="fa fa-hand-o-left control" tooltip="Previous"></i>
+              <i ng-click="startSlide()" class="fa fa-play control" tooltip="Start slide"></i>
+              <i ng-click="stopSlide()" class="fa fa-pause control" tooltip="Stop slide"></i>
+              <i ng-click="showNext()" class="fa fa-hand-o-right control" tooltip="Next"></i>
               <a class="pull-right" href="/">Back to the map</a>
             </h3>
           </div>
         </div>
-        <div class="col-sm-8" ng-show="galleryLoaded">
-          <img ng-repeat="photo in photos" ng-src="{{photo.url}}" ng-click="showSelect($index)"/>
+        <div class="col-sm-8">
+          <img ng-show="galleryLoaded" ng-repeat="photo in photos" ng-src="{{photo.url}}" ng-click="showSelect($index)"/>
+          <div class="text-center" ng-hide="galleryLoaded">
+          <h1><i class="fa fa-spinner fa-pulse"></i>&nbsp;The gallery is being loaded</h1>
+          <h3>{{loadCount  / resSize * 100 | number:0}}&nbsp;% Completed</h3>
         </div>
       </div>
 
