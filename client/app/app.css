@@ -26,16 +26,8 @@
   overflow: auto;
 }
 
-.gallery img.main {
-  max-width: 400px;
-  max-height: 400px;
-  width: auto;
-  height: auto;
-  padding: 5px;
-  overflow: auto;
-}
-
-i:active {
+i:active,
+i:hover {
   color: #3ed136;
 }
 
@@ -48,4 +40,47 @@ i:active {
 
 .animate-show.ng-hide {
   opacity: 0;
+}
+
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+  clear: both;
+}
+
+.img-wrapper img {
+  max-width: 400px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  overflow: auto;
+}
+
+.img-expand {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  font-size: 20px;
+
+}
+
+.img-expand:hover {
+  color: #3ed136;
+}
+
+.modal-img {
+  max-height: 100%;
+  max-width: 100%;
+  overflow: scroll;
+}
+
+.modal-close {
+  position: absolute;
+  right: 10px;
+  padding: 10px;
+}
+
+.modal-close:hover {
+  color: #3ed136;
 }

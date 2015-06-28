@@ -11,7 +11,9 @@ console.log('Seed started');
 Peak.find({}).remove(function() {
   Peak.create({
     _id: 0,
-    animation: 'google.maps.Animation.DROP',
+    options: {
+      animation: 'google.maps.Animation.BOUNCE'
+    },
     latitude: '50.963426',
     longitude: '-118.089938',
     title : 'Mount Mackenzie',
@@ -19,7 +21,9 @@ Peak.find({}).remove(function() {
   },
   {
     _id: 1,
-    animation: 'google.maps.Animation.DROP',
+    options: {
+      animation: 'google.maps.Animation.DROP'
+    },
     latitude: '50.932107',
     longitude: ' -118.287929',
     title : 'Mount MacPherson',
@@ -27,7 +31,9 @@ Peak.find({}).remove(function() {
   },
   {
     _id: 2,
-    animation: 'google.maps.Animation.DROP',
+    options: {
+      animation: 'google.maps.Animation.DROP'
+    },
     latitude: '50.954528',
     longitude: '-118.070146',
     zone: 'Revelstoke',
@@ -35,7 +41,9 @@ Peak.find({}).remove(function() {
   },
   {
     _id: 3,
-    animation: 'google.maps.Animation.DROP',
+    options: {
+      animation: 'google.maps.Animation.DROP'
+    },
     latitude: '50.947210',
     longitude: '-118.070838',
     zone: 'Revelstoke',
@@ -43,7 +51,9 @@ Peak.find({}).remove(function() {
   },
   {
     _id: 4,
-    animation: 'google.maps.Animation.DROP',
+    options: {
+      animation: 'google.maps.Animation.DROP'
+    },
     latitude: '51.284364',
     longitude: '-117.559961',
     zone: 'Roger\'s Pass',
@@ -51,7 +61,9 @@ Peak.find({}).remove(function() {
   },
   {
     _id: 5,
-    animation: 'google.maps.Animation.DROP',
+    options: {
+      animation: 'google.maps.Animation.DROP'
+    },
     latitude: '51.311348',
     longitude: '-117.577142',
     zone: 'Roger\'s Pass',
@@ -59,7 +71,9 @@ Peak.find({}).remove(function() {
   },
   {
     _id: 6,
-    animation: 'google.maps.Animation.DROP',
+    options: {
+      animation: 'google.maps.Animation.DROP'
+    },
     latitude: '51.302349',
     longitude: '-117.585946',
     zone: 'Roger\'s Pass',
@@ -67,7 +81,9 @@ Peak.find({}).remove(function() {
   },
   {
     _id: 7,
-    animation: 'google.maps.Animation.DROP',
+    options: {
+      animation: 'google.maps.Animation.DROP'
+    },
     latitude: '51.296874',
     longitude: '-117.591284',
     zone: 'Roger\'s Pass',
@@ -75,7 +91,9 @@ Peak.find({}).remove(function() {
   },
   {
     _id: 8,
-    animation: 'google.maps.Animation.DROP',
+    options: {
+      animation: 'google.maps.Animation.DROP'
+    },
     latitude: '51.399418',
     longitude: '-116.22351',
     zone: 'Banff National Park',
@@ -83,7 +101,9 @@ Peak.find({}).remove(function() {
   },
   {
     _id: 9,
-    animation: 'google.maps.Animation.DROP',
+    options: {
+      animation: 'google.maps.Animation.DROP'
+    },
     latitude: '43.719915',
     longitude: '-110.799791',
     zone: 'Teton National Park',
@@ -91,7 +111,9 @@ Peak.find({}).remove(function() {
   },
   {
     _id: 10,
-    animation: 'google.maps.Animation.DROP',
+    options: {
+      animation: 'google.maps.Animation.DROP'
+    },
     latitude: '43.729266',
     longitude: '-110.809493',
     zone: 'Teton National Park',

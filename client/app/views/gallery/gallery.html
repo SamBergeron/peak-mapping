@@ -3,22 +3,26 @@
       <div class="gallery" ng-show="resSize != 0">
         <div class="col-sm-4">
           <div class="row text-center">
-            <img ng-repeat="photo in photos" class="main" ng-show="isImageActive($index)" ng-src="{{photo.url}}"
-                  ng-click="stopSlide()"/>
+            <h4 class="text-center">Pictures from<h4>
+            <h2 class="text-center">{{peak.title}}</h2>
+            <div class="img-wrapper">
+              <img ng-repeat="photo in photos" ng-show="isImageActive($index)" ng-src="{{photo.url}}"
+                    ng-click="stopSlide()"/>
+              <i class="img-expand fa fa-arrows-alt" ng-click="open('lg')"></i>
+            </div>
           </div>
           <div class="row">
-            <h3 class="text-left">
+            <h3 class="text-center">
               <i ng-click="showPrev()" class="fa fa-hand-o-left control" tooltip="Previous"></i>
               <i ng-click="startSlide()" class="fa fa-play control" tooltip="Start slide"></i>
               <i ng-click="stopSlide()" class="fa fa-pause control" tooltip="Stop slide"></i>
               <i ng-click="showNext()" class="fa fa-hand-o-right control" tooltip="Next"></i>
-              <a class="pull-right" href="/">Back to the map</a>
             </h3>
           </div>
         </div>
         <div class="col-sm-8">
           <div class="animate-show" ng-show="galleryLoaded">
-            <img ng-repeat="photo in photos" ng-src="{{photo.url}}" ng-click="showSelect($index)"/>
+            <img ng-repeat="photo in photos" ng-src="{{photo.url}}" ng-click="showSelect($index)" ng-dblclick="open('lg')"/>
           </div>
           <div class="text-center" ng-hide="galleryLoaded">
             <h1><i class="fa fa-spinner fa-pulse"></i>&nbsp;The gallery is being loaded</h1>
@@ -33,3 +37,8 @@
     <h3 class="text-center">(Choose one from the map)</h3>
   </div>
 </div>
+
+<script type="text/ng-template" id="modal.html">
+      <i class="modal-close fa fa-times fa-2x" ng-click="ok()"></i>
+      <img class="modal-img" ng-src="{{photo.url}}"></img>
+</script>

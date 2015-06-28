@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module 'peakMapApp'
-.controller 'GalleryCtrl', ($scope, $log, $interval, $routeParams, $http, preloader) ->
+.controller 'GalleryCtrl', ($scope, $log, $interval, $routeParams, $http, $modal, preloader) ->
 
   $scope.galleryId = $routeParams.galleryId
   $scope.photos = []
@@ -18,12 +18,18 @@ angular.module 'peakMapApp'
       preloader.preload(picture.url).then(
         (success) ->
           $scope.loadCount++
-          console.log('Image ' + $scope.loadCount + ' of ' + res.length + ' has been loaded')
+          #$log.info('Image ' + $scope.loadCount + ' of ' + res.length + ' has been loaded')
         , (failure) ->
           console.log('Seems like loading failed for: ' + failure)
         )
   .error (res) ->
     $log.log 'Loading pictures has failed ' + res
+
+  $http # Get peak by id
+  .get('/api/peaks/' + $scope.galleryId).success (res) ->
+    $scope.peak = res
+  .error (res) ->
+    $log.log('Could not get peak information ' + res)
 
   $scope.galleryLoaded = false
   $scope.$watch('loadCount', () ->
@@ -44,6 +50,7 @@ angular.module 'peakMapApp'
   $scope.showNext = () ->
     return $scope._index = if $scope._index < $scope.photos.length-1 then ++$scope._index else 0
   $scope.showSelect = (index) ->
+    $scope.stopSlide()
     return $scope._index = index
 
   #Start slide on page load
@@ -61,3 +68,22 @@ angular.module 'peakMapApp'
     if angular.isDefined(slide)
       $interval.cancel(slide)
       slide = undefined
+
+  # Modal control functions -------------------------------------
+  $scope.open = (size) ->
+    modalInstance = $modal.open(
+      animation: true
+      templateUrl: 'modal.html'
+      controller: 'ModalInstanceCtrl'
+      size: size
+      resolve:
+        picture: () ->
+          return $scope.photos[$scope._index]
+      )
+
+    modalInstance.result.then(
+      (selectedItem) ->
+        $log.info('Modal has loaded')
+      , () ->
+        $log.info('Modal dismissed')
+      )
