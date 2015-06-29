@@ -8,7 +8,7 @@ angular.module 'peakMapApp'
   $scope.photoUrls = []
   $scope.galleryLoaded = false
 
-  $scope.resSize = 0;
+  $scope.resSize = 0
   $http # Call GET on pictures Table
   .get('/api/pictures/peakRef/' + $scope.galleryId).success (res) ->
     $scope.loadCount = 0
@@ -42,7 +42,7 @@ angular.module 'peakMapApp'
     )
 
   # Gallery control functions -----------------------------------
-  $scope._index = 0;
+  $scope._index = 0
   $scope.isImageActive = (index) ->
     return index == $scope._index
   $scope.showPrev = () ->
