@@ -6,17 +6,17 @@ angular.module 'peakMapApp'
   $scope.$watch 'files', () ->
     $scope.upload($scope.files)
 
-  $log.info($rootScope.config)
+  $scope.config = $rootScope.config.awsConfig
 
   $scope.upload = (files) ->
     if (files && files.length)
       for file, i in files
         Upload
         .upload(
-          url: 'peakmap.media.s3-website-us-east-1.amazonaws.com' #Points to AWS bucket
+          url: 'peakmap.media.s3-website-us-east-1.amazonaws.com'
           fields:
             key: file.name #Becomes AWS filename
-            AWSAccessKeyId: {} #TODO: Make this a config value
+            AWSAccessKeyId: $scope.config.awsKeyId
             acl: 'private' #private or public access for file
             policy: {} #TODO: make a policy service
             signature: {} #TODO make a signature service... or have it in policy service?

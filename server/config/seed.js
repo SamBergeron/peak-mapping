@@ -7,18 +7,8 @@
 
 var Peak = require('../api/peak/peak.model');
 var Picture = require('../api/picture/picture.model');
-var Config = require('../api/config/config.model');
-
-var localConf = require('../config/local.json');
 
 console.log('Seed started');
-Config.find({}).remove(function() {
-  Config.create({
-    _id: "DEV",
-    name: "dev config",
-    json: JSON.stringify(localConf)
-  });
-});
 
 Peak.find({}).remove(function() {
   Peak.create({

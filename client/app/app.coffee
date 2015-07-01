@@ -26,8 +26,7 @@ angular.module 'peakMapApp', [
       libraries: 'weather,geometry,visualization'
 
 .run ($rootScope, $http, $log) ->
-  $http.get('/api/configs/DEV').success (config) ->
-    # $log.info(config)
+  $http.get('/api/config').success (config) ->
     $rootScope.config = config
   .error (err) ->
     $log.error 'Could not retrieve config'
